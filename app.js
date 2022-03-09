@@ -18,6 +18,8 @@ const gameBoard = (() => {
         if (checkPosition(playerChoice)) {
             let pos = getBoardPosition(playerChoice);
             board[pos] = marker;
+        } else {
+            return false;
         }
     };
 

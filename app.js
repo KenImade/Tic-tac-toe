@@ -10,7 +10,7 @@ const gameBoard = (() => {
     const getBoardPosition = (input) => {
         let value = parseInt(input)
         return value - 1;
-    }
+    };
 
     const updateBoard = (input) => {
         let playerChoice = parseInt(input);
@@ -19,7 +19,7 @@ const gameBoard = (() => {
             let pos = getBoardPosition(playerChoice);
             board[pos] = marker;
         }
-    }
+    };
 
     const checkPosition = (num) => {
         let pos = getBoardPosition(num);
@@ -29,14 +29,24 @@ const gameBoard = (() => {
         } else {
             return false;
         }
-    }
+    };
 
     const getBoard = () => {
         return board;
-    }
+    };
 
     return {
         updateBoard,
         getBoard,
-    }
+    };
 })();
+
+const Player = (playerName, marker) => {
+    const getName = () => playerName;
+    const getMarker = () => marker;
+
+    return {
+        getName,
+        getMarker
+    };
+};

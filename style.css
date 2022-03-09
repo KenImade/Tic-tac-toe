@@ -1,0 +1,17 @@
+body {
+    background-color: #14bdac;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.board {
+    border-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+}

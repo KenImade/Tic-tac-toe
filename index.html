@@ -6,30 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap" rel="stylesheet">
 
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
     <div class="card">
-        <div class="options">
-            <div class="markers">
-                <button>X</button>
-                <button>O</button>
-            </div>
+
+        <div class="markers">
+            <button class="marker-btn">X</button>
+            <button class="marker-btn">O</button>
         </div>
+
         <div class="board">
             <button class="field"></button>
             <button class="field"></button>
+            <button class="field no-r"></button>
             <button class="field"></button>
             <button class="field"></button>
-            <button class="field"></button>
-            <button class="field"></button>
-            <button class="field"></button>
-            <button class="field"></button>
-            <button class="field"></button>
+            <button class="field no-r"></button>
+            <button class="field no-b"></button>
+            <button class="field no-b"></button>
+            <button class="field no-b no-r"></button>
         </div>
-    </div>
-    
+
+        <button class="restart-btn">Restart</button>
+    </div>  
 </body>
 <script src="./app.js"></script>
 </html>

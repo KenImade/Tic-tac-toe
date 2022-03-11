@@ -14,9 +14,8 @@
 <body>
     <div class="card">
 
-        <div class="markers">
-            <button class="marker-btn">X</button>
-            <button class="marker-btn">O</button>
+        <div class="message" id="message">
+            Click on a square to begin
         </div>
 
         <div class="board">
@@ -25,13 +24,15 @@
             <button class="field no-r" data-index="2"></button>
             <button class="field" data-index="3"></button>
             <button class="field" data-index="4"></button>
-            <button class="field no-r" data-index="5">X</button>
-            <button class="field no-b" data-index="6">O</button>
+            <button class="field no-r" data-index="5"></button>
+            <button class="field no-b" data-index="6"></button>
             <button class="field no-b" data-index="7"></button>
             <button class="field no-b no-r" data-index="8"></button>
         </div>
 
-        <button class="restart-btn">Restart</button>
+        <div class="btm-btn">
+            <button class="restart-btn" id="restart-btn">Restart</button>
+        </div>
     </div>  
 </body>
 <script src="./app.js"></script>

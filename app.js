@@ -34,3 +34,28 @@ const Player = (marker) => {
         getMarker
     };
 };
+
+const displayController = (() => {
+    const fieldElements = document.querySelectorAll(".field");
+    const restartBtn = document.getElementsByClassName("restart-btn");
+
+    fieldElements.forEach((field) => {
+        field.addEventListener("click", (e) => {
+            if (gameController.isOver() || e.target.textContent !== "") return;
+            gameController.playRound(parseInt(e.target.dataset.index));
+            updateGameBoard();
+        })
+    });
+
+    restartBtn.addEventListener("click", (e) => {
+        Gameboard.resetBoard();
+        gameController.reset();
+        updateGameBoard();
+    });
+
+    const updateGameBoard = () => {
+        for (let i = 0; i < fieldElements.length; i++) {
+            fieldElements[i].textContent = Gameboard.getField(i);
+        }
+    };
+})();

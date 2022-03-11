@@ -9,17 +9,23 @@ const Gameboard = (() => {
 
     const placeMarker = (position, marker) => {
         board[position] = marker;
-    }
+    };
 
     const resetBoard = () => {
         for (let i = 0; i < board.length; i++) {
             board[i] = "";
         }
+    };
+
+    const getField = (position) => {
+        if (position > board.length) return;
+        return board[position];
     }
 
     return {
         placeMarker,
-        resetBoard
+        resetBoard,
+        getField
     };
 })();
 

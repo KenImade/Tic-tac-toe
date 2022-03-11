@@ -57,6 +57,9 @@ body {
     outline: none;
     border-bottom: 5px solid #70757a;
     border-right: 5px solid #70757a;
+    
+    font-size: 50px;
+    font-weight: 500;
 }
 
 .field.no-b {

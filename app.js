@@ -3,52 +3,34 @@
 // display - a module
 // players - factory
 
-const gameBoard = (() => {
+const Gameboard = (() => {
 
-    let board = ["","","","","","","","",""];
+    let board = ["","","","","","","",""];
 
-    const getBoardPosition = (input) => {
-        let value = parseInt(input)
-        return value - 1;
-    };
+    const placeMarker = (position, marker) => {
+        board[position] = marker;
+    }
 
-    const updateBoard = (input) => {
-        let playerChoice = parseInt(input);
-
-        if (checkPosition(playerChoice)) {
-            let pos = getBoardPosition(playerChoice);
-            board[pos] = marker;
-        } else {
-            return false;
+    const resetBoard = () => {
+        for (let i = 0; i < board.length; i++) {
+            board[i] = "";
         }
-    };
-
-    const checkPosition = (num) => {
-        let pos = getBoardPosition(num);
-
-        if (board[pos] === "") {
-            return true;
-        } else {
-            return false;
-        }
-    };
-
-    const getBoard = () => {
-        return board;
-    };
+    }
 
     return {
-        updateBoard,
-        getBoard,
+        placeMarker,
+        resetBoard
     };
 })();
 
-const Player = (playerName, marker) => {
-    const getName = () => playerName;
-    const getMarker = () => marker;
+const Player = (marker) => {
+    this.marker = marker;
+
+    const getMarker = () => {
+        return marker;
+    };
 
     return {
-        getName,
         getMarker
     };
 };
